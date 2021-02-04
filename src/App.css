@@ -1,10 +1,16 @@
+* {
+  font-family: 'Roboto Mono', monospace;
+}
+
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -12,6 +18,10 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
 
 .App-header {
   background-color: #282c34;
@@ -28,11 +38,49 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.complete {
+  text-decoration: line-through;
+}
+
+
+.write-area-component{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5%;
+}
+
+.write-area{
+  text-align: left;
+  outline: none;
+  resize: none;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 90%;
+  height: 90%; 
+  min-height: 90%;
+}
+
+
+.icon {
+  max-width: 40px; 
+  height: auto;
+}
+
+
+.todoList{
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-container{
+  flex-direction: row !important;
+  justify-content: space-evenly;
+}
+
+
+.buttonAdd {
+  align-items: flex-end;
+  flex-direction: row-reverse;
 }
