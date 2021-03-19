@@ -3,6 +3,9 @@ import firebase from '../util/firebase';
 import Todo from './Todo';
 import '../App.css';
 
+
+
+
 export default function TodoList() {
   const [todoList, setTodoList] = useState();
 
@@ -19,10 +22,11 @@ export default function TodoList() {
   }, []);
 
   return (
-    <div className = "todoList">
-        
+    <div className = "todoList"> 
       {todoList
-        ? todoList.map((todo, index) => <Todo todo={todo} key={index} />)
+        ? todoList.map((todo, index) =>
+        <Todo todo={todo} key={index} />
+        )
         : ''}
     </div>
   );
